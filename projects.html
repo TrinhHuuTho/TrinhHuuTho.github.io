@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI/ML Projects by Trinh Huu Tho – LLM applications, Computer Vision systems, NLP models, and more." />
+  <meta property="og:title" content="Projects | Trinh Huu Tho" />
+  <meta property="og:url" content="https://TrinhHuuTho.github.io/projects.html" />
+  <title>Projects | Trinh Huu Tho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">THT</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="projects.html" class="nav-link active">Projects</a></li>
+        <li><a href="blog/index.html" class="nav-link">Blog</a></li>
+        <li><a href="guestbook.html" class="nav-link">Guestbook</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Projects</h1>
+      <p>AI/ML projects I've built, from research prototypes to production systems</p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Filter Bar -->
+      <div class="filter-bar" role="group" aria-label="Filter projects by category">
+        <button class="tag filter-btn active" data-filter="all">All</button>
+        <button class="tag filter-btn" data-filter="llm">LLM</button>
+        <button class="tag filter-btn" data-filter="nlp">NLP</button>
+        <button class="tag filter-btn" data-filter="cv">Computer Vision</button>
+        <button class="tag filter-btn" data-filter="mlops">MLOps</button>
+        <button class="tag filter-btn" data-filter="research">Research</button>
+      </div>
+
+      <!-- No Results -->
+      <div id="noProjectResults" class="no-results" style="display: none;" role="status">
+        <div class="icon">🔍</div>
+        <p>No projects found in this category.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: RAG Chatbot -->
+        <article class="project-card fade-in" data-categories="llm nlp">
+          <div class="project-thumbnail">
+            <div class="project-thumbnail-placeholder" aria-hidden="true">🤖</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">LLM</span>
+              <span class="tag">NLP</span>
+            </div>
+            <h3 class="project-title">RAG-Powered Customer Support Bot</h3>
+            <p class="project-desc">
+              Enterprise-grade chatbot using Retrieval-Augmented Generation with LangChain and GPT-4. Features document ingestion pipeline, hybrid search (BM25 + dense retrieval), and multi-turn conversation handling. Reduced support ticket volume by 40%.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">LangChain</span>
+              <span class="tech-badge">OpenAI</span>
+              <span class="tech-badge">FAISS</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/TrinhHuuTho/rag-chatbot" class="project-link" target="_blank" rel="noopener noreferrer">⭐ GitHub</a>
+              <a href="#" class="project-link primary">Live Demo →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2: YOLOv8 -->
+        <article class="project-card fade-in" data-categories="cv deep-learning">
+          <div class="project-thumbnail">
+            <div class="project-thumbnail-placeholder" aria-hidden="true">👁️</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Computer Vision</span>
+            </div>
+            <h3 class="project-title">Real-time Object Detection System</h3>
+            <p class="project-desc">
+              Production-ready YOLOv8 pipeline with ONNX quantization for edge deployment. Achieves 60+ FPS on Raspberry Pi 4 with 94% mAP. Includes a custom training pipeline, data augmentation, and evaluation dashboard.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">YOLOv8</span>
+              <span class="tech-badge">ONNX</span>
+              <span class="tech-badge">OpenCV</span>
+              <span class="tech-badge">Docker</span>
+              <span class="tech-badge">Streamlit</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/TrinhHuuTho/yolov8-edge" class="project-link" target="_blank" rel="noopener noreferrer">⭐ GitHub</a>
+              <a href="https://github.com/TrinhHuuTho/yolov8-edge" class="project-link primary">Demo →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3: Vietnamese NLP -->
+        <article class="project-card fade-in" data-categories="nlp">
+          <div class="project-thumbnail">
+            <div class="project-thumbnail-placeholder" aria-hidden="true">📝</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">NLP</span>
+              <span class="tag">Fine-tuning</span>
+            </div>
+            <h3 class="project-title">Vietnamese Sentiment Analysis</h3>
+            <p class="project-desc">
+              Fine-tuned PhoBERT for Vietnamese sentiment analysis on 500K+ social media samples. Achieves 92% F1-score. Includes an API endpoint and a browser extension for real-time analysis.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Hugging Face</span>
+              <span class="tech-badge">PhoBERT</span>
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">MLflow</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/TrinhHuuTho/vn-sentiment" class="project-link" target="_blank" rel="noopener noreferrer">⭐ GitHub</a>
+              <a href="#" class="project-link primary">Demo →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4: ML Platform -->
+        <article class="project-card fade-in" data-categories="mlops">
+          <div class="project-thumbnail">
+            <div class="project-thumbnail-placeholder" aria-hidden="true">⚙️</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">MLOps</span>
+            </div>
+            <h3 class="project-title">Lightweight ML Training Platform</h3>
+            <p class="project-desc">
+              A self-hosted MLOps platform built with FastAPI, MLflow, and Airflow. Features experiment tracking, model registry, automated retraining pipelines, and a monitoring dashboard with Prometheus + Grafana.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">MLflow</span>
+              <span class="tech-badge">Airflow</span>
+              <span class="tech-badge">Docker</span>
+              <span class="tech-badge">Kubernetes</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/TrinhHuuTho/ml-platform" class="project-link" target="_blank" rel="noopener noreferrer">⭐ GitHub</a>
+              <a href="https://github.com/TrinhHuuTho/ml-platform" class="project-link primary">Docs →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5: LLM Agent -->
+        <article class="project-card fade-in" data-categories="llm">
+          <div class="project-thumbnail">
+            <div class="project-thumbnail-placeholder" aria-hidden="true">🧠</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">LLM</span>
+              <span class="tag">Agents</span>
+            </div>
+            <h3 class="project-title">AutoCode AI Agent</h3>
+            <p class="project-desc">
+              An autonomous coding agent that can analyze requirements, write code, run tests, and iterate until the task is complete. Built on top of Claude and GPT-4 with a custom tool-use framework.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">LangChain</span>
+              <span class="tech-badge">Claude</span>
+              <span class="tech-badge">GPT-4</span>
+              <span class="tech-badge">Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/TrinhHuuTho/autocode-agent" class="project-link" target="_blank" rel="noopener noreferrer">⭐ GitHub</a>
+              <a href="#" class="project-link primary">Demo →</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6: Research -->
+        <article class="project-card fade-in" data-categories="research nlp">
+          <div class="project-thumbnail">
+            <div class="project-thumbnail-placeholder" aria-hidden="true">🔬</div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Research</span>
+              <span class="tag">NLP</span>
+            </div>
+            <h3 class="project-title">Cross-lingual Transfer Learning Study</h3>
+            <p class="project-desc">
+              Research project studying cross-lingual transfer of language models for low-resource Vietnamese NLP tasks. Published findings on effective fine-tuning strategies with limited data.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">mBERT</span>
+              <span class="tech-badge">XLM-R</span>
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">Hugging Face</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/TrinhHuuTho/xling-transfer" class="project-link" target="_blank" rel="noopener noreferrer">⭐ GitHub</a>
+              <a href="#" class="project-link primary">Paper →</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background: var(--bg-secondary);">
+    <div class="container" style="text-align: center;">
+      <div class="fade-in">
+        <h2 style="margin-bottom: 16px;">Have a Project Idea?</h2>
+        <p style="margin-bottom: 32px; max-width: 500px; margin-left: auto; margin-right: auto;">
+          I'm always looking for interesting challenges. Let's collaborate!
+        </p>
+        <a href="contact.html" class="btn btn-primary">Get In Touch →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0; justify-content: center;">
+        <span>© 2025 Trinh Huu Tho. Built with ❤️ and vanilla HTML/CSS/JS.</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

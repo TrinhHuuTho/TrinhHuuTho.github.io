@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Technical blog by Trinh Huu Tho – articles on AI, Machine Learning, LLMs, Computer Vision, and software engineering." />
+  <meta property="og:title" content="Blog | Trinh Huu Tho" />
+  <meta property="og:url" content="https://TrinhHuuTho.github.io/blog/" />
+  <title>Blog | Trinh Huu Tho</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml" />
+
+  <!-- RSS Feed -->
+  <link rel="alternate" type="application/rss+xml" title="Trinh Huu Tho Blog" href="../feed.xml" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">THT</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../projects.html" class="nav-link">Projects</a></li>
+        <li><a href="index.html" class="nav-link active">Blog</a></li>
+        <li><a href="../guestbook.html" class="nav-link">Guestbook</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Blog</h1>
+      <p>Thoughts on AI, Machine Learning, and engineering</p>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Search Bar -->
+      <div class="blog-search-bar">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <label for="blogSearch" class="sr-only">Search articles</label>
+        <input
+          type="search"
+          id="blogSearch"
+          placeholder="Search articles..."
+          aria-label="Search articles"
+        />
+      </div>
+
+      <!-- Tag Filters -->
+      <div class="filter-bar" role="group" aria-label="Filter by tag">
+        <button class="tag blog-tag-btn active" data-tag="all">All</button>
+        <button class="tag blog-tag-btn" data-tag="llm">LLM</button>
+        <button class="tag blog-tag-btn" data-tag="nlp">NLP</button>
+        <button class="tag blog-tag-btn" data-tag="computer vision">Computer Vision</button>
+        <button class="tag blog-tag-btn" data-tag="mlops">MLOps</button>
+        <button class="tag blog-tag-btn" data-tag="tutorial">Tutorial</button>
+      </div>
+
+      <!-- No Results -->
+      <div id="noBlogResults" class="no-results" style="display: none;" role="status">
+        <div class="icon">📭</div>
+        <p>No articles found. Try a different search or tag.</p>
+      </div>
+
+      <div class="blog-grid">
+
+        <!-- Post 1 -->
+        <a href="post-1-building-llm-chatbot.html"
+           class="blog-card fade-in"
+           data-title="Building a Production-Ready RAG Chatbot with LangChain FastAPI"
+           data-tags="llm nlp tutorial"
+           data-excerpt="A step-by-step guide to building an enterprise-grade chatbot using Retrieval-Augmented Generation">
+          <div class="blog-thumbnail">
+            <div class="blog-thumbnail-placeholder" aria-hidden="true">🤖</div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="tag" style="font-size:0.75rem; padding: 3px 10px;">LLM</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>March 10, 2025</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>8 min read</span>
+            </div>
+            <h3 class="blog-title">Building a Production-Ready RAG Chatbot with LangChain &amp; FastAPI</h3>
+            <p class="blog-excerpt">A step-by-step guide to building an enterprise-grade chatbot using Retrieval-Augmented Generation, from document ingestion to deployment.</p>
+            <div class="blog-footer">
+              <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">LangChain</span>
+                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">FastAPI</span>
+                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">RAG</span>
+              </div>
+              <span class="read-more">Read</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 2 -->
+        <a href="post-2-computer-vision-yolov8.html"
+           class="blog-card fade-in"
+           data-title="YOLOv8 Edge Deployment From Training to 60 FPS on Raspberry Pi"
+           data-tags="computer vision deep learning tutorial"
+           data-excerpt="How I trained a custom YOLOv8 model optimized it with ONNX quantization and deployed it to run at 60 FPS on embedded hardware">
+          <div class="blog-thumbnail">
+            <div class="blog-thumbnail-placeholder" aria-hidden="true">👁️</div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="tag" style="font-size:0.75rem; padding: 3px 10px;">Computer Vision</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>February 20, 2025</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>6 min read</span>
+            </div>
+            <h3 class="blog-title">YOLOv8 Edge Deployment: From Training to 60 FPS on Raspberry Pi</h3>
+            <p class="blog-excerpt">How I trained a custom YOLOv8 model, optimized it with ONNX quantization, and deployed it to run at 60 FPS on embedded hardware.</p>
+            <div class="blog-footer">
+              <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">YOLOv8</span>
+                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">ONNX</span>
+                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">Edge AI</span>
+              </div>
+              <span class="read-more">Read</span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 3 -->
+        <a href="post-3-rag-pipeline.html"
+           class="blog-card fade-in"
+           data-title="Fine-tuning PhoBERT for Vietnamese NLP Lessons Learned"
+           data-tags="nlp fine-tuning transformer"
+           data-excerpt="A deep dive into fine-tuning PhoBERT for Vietnamese sentiment analysis including dataset preparation training strategies and evaluation">
+          <div class="blog-thumbnail">
+            <div class="blog-thumbnail-placeholder" aria-hidden="true">🔍</div>
+          </div>
+          <div class="blog-body">
+            <div class="blog-meta">
+              <span class="tag" style="font-size:0.75rem; padding: 3px 10px;">NLP</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>January 15, 2025</span>
+              <span class="dot" aria-hidden="true"></span>
+              <span>10 min read</span>
+            </div>
+            <h3 class="blog-title">Fine-tuning PhoBERT for Vietnamese NLP: Lessons Learned</h3>
+            <p class="blog-excerpt">A deep dive into fine-tuning PhoBERT for Vietnamese sentiment analysis, including dataset preparation, training strategies, and evaluation.</p>
+            <div class="blog-footer">
+              <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">PhoBERT</span>
+                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">Fine-tuning</span>
+                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">Vietnamese NLP</span>
+              </div>
+              <span class="read-more">Read</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- RSS Link -->
+      <div id="rss" style="text-align: center; margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--border);">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">
+          Subscribe via
+          <a href="../feed.xml" style="color: var(--accent); font-weight: 600;">📡 RSS Feed</a>
+          to get new articles delivered to your reader.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top: none; padding-top: 0; justify-content: center;">
+        <span>© 2025 Trinh Huu Tho. Built with ❤️ and vanilla HTML/CSS/JS.</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="../js/main.js"></script>
+</body>
+</html>
