@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://TrinhHuuTho.github.io/sitemap.xml
