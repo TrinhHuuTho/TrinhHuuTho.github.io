@@ -1,35 +1,24 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Trinh Huu Tho — AI Engineer Blog</title>
-    <link>https://TrinhHuuTho.github.io/blog/</link>
-    <description>Articles on AI, Machine Learning, LLMs, Computer Vision, and software engineering by Trinh Huu Tho.</description>
+    <title>{{ site.title }} Blog</title>
+    <link>{{ site.url }}/blog/</link>
+    <description>{{ site.description }}</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 10 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://TrinhHuuTho.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>{{ site.posts.first.date | date_to_rfc822 }}</lastBuildDate>
+    <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
 
+    {% for post in site.posts %}
     <item>
-      <title>Building a Production-Ready RAG Chatbot with LangChain &amp; FastAPI</title>
-      <link>https://TrinhHuuTho.github.io/blog/post-1-building-llm-chatbot.html</link>
-      <description>A step-by-step guide to building an enterprise-grade chatbot using Retrieval-Augmented Generation, from document ingestion to deployment.</description>
-      <pubDate>Mon, 10 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://TrinhHuuTho.github.io/blog/post-1-building-llm-chatbot.html</guid>
+      <title>{{ post.title | xml_escape }}</title>
+      <link>{{ site.url }}{{ post.url }}</link>
+      <description>{{ post.excerpt | xml_escape }}</description>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <guid>{{ site.url }}{{ post.url }}</guid>
     </item>
-
-    <item>
-      <title>YOLOv8 Edge Deployment: From Training to 60 FPS on Raspberry Pi</title>
-      <link>https://TrinhHuuTho.github.io/blog/post-2-computer-vision-yolov8.html</link>
-      <description>How I trained a custom YOLOv8 model, optimized it with ONNX quantization, and deployed it to run at 60+ FPS on embedded hardware.</description>
-      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://TrinhHuuTho.github.io/blog/post-2-computer-vision-yolov8.html</guid>
-    </item>
-
-    <item>
-      <title>Fine-tuning PhoBERT for Vietnamese NLP: Lessons Learned</title>
-      <link>https://TrinhHuuTho.github.io/blog/post-3-rag-pipeline.html</link>
-      <description>A deep dive into fine-tuning PhoBERT for Vietnamese sentiment analysis, including dataset preparation, training strategies, and evaluation.</description>
-      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://TrinhHuuTho.github.io/blog/post-3-rag-pipeline.html</guid>
-    </item>
+    {% endfor %}
   </channel>
 </rss>

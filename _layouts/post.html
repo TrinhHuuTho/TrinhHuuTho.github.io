@@ -1,0 +1,83 @@
+---
+layout: default
+---
+
+<!-- Post Hero -->
+<section class="post-hero">
+  <div class="container">
+    <div class="post-meta">
+      <span class="post-category">{{ page.category }}</span>
+      <span class="post-date">📅 {{ page.date | date: "%B %-d, %Y" }}</span>
+      <span class="post-read-time">⏱️ {{ page.read_time }} min read</span>
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-subtitle">{{ page.subtitle }}</p>
+    <div class="post-author">
+      <div class="author-avatar" aria-hidden="true">👨‍💻</div>
+      <div>
+        <div class="author-name">Trinh Huu Tho</div>
+        <div class="author-title">AI Engineer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Post Content -->
+<main class="post-content">
+  <article class="post-body container" itemscope itemtype="https://schema.org/Article">
+
+    {{ content }}
+
+    <!-- Share Buttons -->
+    <div class="post-share">
+      <span>Share this article:</span>
+      <button class="share-btn" data-action="twitter">🐦 Twitter</button>
+      <button class="share-btn" data-action="linkedin">💼 LinkedIn</button>
+      <button class="share-btn" data-action="copy">🔗 Copy Link</button>
+    </div>
+
+    <!-- Post Navigation -->
+    <nav class="post-nav" aria-label="Post navigation">
+      {% if page.previous %}
+      <a href="{{ page.previous.url }}" class="post-nav-link">
+        <div class="post-nav-label">← Previous Post</div>
+        <div class="post-nav-title">{{ page.previous.title }}</div>
+      </a>
+      {% else %}
+      <div></div>
+      {% endif %}
+      {% if page.next %}
+      <a href="{{ page.next.url }}" class="post-nav-link next">
+        <div class="post-nav-label">Next Post →</div>
+        <div class="post-nav-title">{{ page.next.title }}</div>
+      </a>
+      {% else %}
+      <div></div>
+      {% endif %}
+    </nav>
+
+  </article>
+</main>
+
+<!-- Giscus Comments -->
+<section style="padding: 60px 0; border-top: 1px solid var(--border);">
+  <div class="container" style="max-width: 800px;">
+    <h3 style="margin-bottom: 24px;">Comments</h3>
+    <script src="https://giscus.app/client.js"
+      data-repo="TrinhHuuTho/TrinhHuuTho.github.io"
+      data-repo-id="R_kgDORq_GoQ"
+      data-category="Blog Comments"
+      data-category-id="DIC_kwDORq_Goc4C497n"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="preferred_color_scheme"
+      data-lang="en"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async>
+    </script>
+  </div>
+</section>

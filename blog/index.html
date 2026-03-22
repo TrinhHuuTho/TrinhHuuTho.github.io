@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -81,95 +83,36 @@
 
       <div class="blog-grid">
 
-        <!-- Post 1 -->
-        <a href="post-1-building-llm-chatbot.html"
+        {% for post in site.posts %}
+        <a href="{{ post.url }}"
            class="blog-card fade-in"
-           data-title="Building a Production-Ready RAG Chatbot with LangChain FastAPI"
-           data-tags="llm nlp tutorial"
-           data-excerpt="A step-by-step guide to building an enterprise-grade chatbot using Retrieval-Augmented Generation">
+           data-title="{{ post.title | xml_escape }}"
+           data-tags="{{ post.tags | join: ' ' }}"
+           data-excerpt="{{ post.excerpt | xml_escape }}">
           <div class="blog-thumbnail">
-            <div class="blog-thumbnail-placeholder" aria-hidden="true">🤖</div>
+            <div class="blog-thumbnail-placeholder" aria-hidden="true">{{ post.emoji }}</div>
           </div>
           <div class="blog-body">
             <div class="blog-meta">
-              <span class="tag" style="font-size:0.75rem; padding: 3px 10px;">LLM</span>
+              <span class="tag" style="font-size:0.75rem; padding: 3px 10px;">{{ post.category }}</span>
               <span class="dot" aria-hidden="true"></span>
-              <span>March 10, 2025</span>
+              <span>{{ post.date | date: "%B %-d, %Y" }}</span>
               <span class="dot" aria-hidden="true"></span>
-              <span>8 min read</span>
+              <span>{{ post.read_time }} min read</span>
             </div>
-            <h3 class="blog-title">Building a Production-Ready RAG Chatbot with LangChain &amp; FastAPI</h3>
-            <p class="blog-excerpt">A step-by-step guide to building an enterprise-grade chatbot using Retrieval-Augmented Generation, from document ingestion to deployment.</p>
+            <h3 class="blog-title">{{ post.title }}</h3>
+            <p class="blog-excerpt">{{ post.excerpt }}</p>
             <div class="blog-footer">
               <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">LangChain</span>
-                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">FastAPI</span>
-                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">RAG</span>
+                {% for tech in post.tech_tags %}
+                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">{{ tech }}</span>
+                {% endfor %}
               </div>
               <span class="read-more">Read</span>
             </div>
           </div>
         </a>
-
-        <!-- Post 2 -->
-        <a href="post-2-computer-vision-yolov8.html"
-           class="blog-card fade-in"
-           data-title="YOLOv8 Edge Deployment From Training to 60 FPS on Raspberry Pi"
-           data-tags="computer vision deep learning tutorial"
-           data-excerpt="How I trained a custom YOLOv8 model optimized it with ONNX quantization and deployed it to run at 60 FPS on embedded hardware">
-          <div class="blog-thumbnail">
-            <div class="blog-thumbnail-placeholder" aria-hidden="true">👁️</div>
-          </div>
-          <div class="blog-body">
-            <div class="blog-meta">
-              <span class="tag" style="font-size:0.75rem; padding: 3px 10px;">Computer Vision</span>
-              <span class="dot" aria-hidden="true"></span>
-              <span>February 20, 2025</span>
-              <span class="dot" aria-hidden="true"></span>
-              <span>6 min read</span>
-            </div>
-            <h3 class="blog-title">YOLOv8 Edge Deployment: From Training to 60 FPS on Raspberry Pi</h3>
-            <p class="blog-excerpt">How I trained a custom YOLOv8 model, optimized it with ONNX quantization, and deployed it to run at 60 FPS on embedded hardware.</p>
-            <div class="blog-footer">
-              <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">YOLOv8</span>
-                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">ONNX</span>
-                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">Edge AI</span>
-              </div>
-              <span class="read-more">Read</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Post 3 -->
-        <a href="post-3-rag-pipeline.html"
-           class="blog-card fade-in"
-           data-title="Fine-tuning PhoBERT for Vietnamese NLP Lessons Learned"
-           data-tags="nlp fine-tuning transformer"
-           data-excerpt="A deep dive into fine-tuning PhoBERT for Vietnamese sentiment analysis including dataset preparation training strategies and evaluation">
-          <div class="blog-thumbnail">
-            <div class="blog-thumbnail-placeholder" aria-hidden="true">🔍</div>
-          </div>
-          <div class="blog-body">
-            <div class="blog-meta">
-              <span class="tag" style="font-size:0.75rem; padding: 3px 10px;">NLP</span>
-              <span class="dot" aria-hidden="true"></span>
-              <span>January 15, 2025</span>
-              <span class="dot" aria-hidden="true"></span>
-              <span>10 min read</span>
-            </div>
-            <h3 class="blog-title">Fine-tuning PhoBERT for Vietnamese NLP: Lessons Learned</h3>
-            <p class="blog-excerpt">A deep dive into fine-tuning PhoBERT for Vietnamese sentiment analysis, including dataset preparation, training strategies, and evaluation.</p>
-            <div class="blog-footer">
-              <div style="display: flex; gap: 6px; flex-wrap: wrap;">
-                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">PhoBERT</span>
-                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">Fine-tuning</span>
-                <span class="tag" style="font-size:0.72rem; padding: 2px 8px;">Vietnamese NLP</span>
-              </div>
-              <span class="read-more">Read</span>
-            </div>
-          </div>
-        </a>
+        {% endfor %}
 
       </div>
 
