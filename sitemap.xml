@@ -1,56 +1,43 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://TrinhHuuTho.github.io/</loc>
-    <lastmod>2025-03-10</lastmod>
+    <loc>{{ site.url }}/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://TrinhHuuTho.github.io/about.html</loc>
-    <lastmod>2025-03-10</lastmod>
+    <loc>{{ site.url }}/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://TrinhHuuTho.github.io/projects.html</loc>
-    <lastmod>2025-03-10</lastmod>
+    <loc>{{ site.url }}/projects.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://TrinhHuuTho.github.io/blog/</loc>
-    <lastmod>2025-03-10</lastmod>
+    <loc>{{ site.url }}/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  {% for post in site.posts %}
   <url>
-    <loc>https://TrinhHuuTho.github.io/blog/post-1-building-llm-chatbot.html</loc>
-    <lastmod>2025-03-10</lastmod>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    <lastmod>{{ post.date | date: "%Y-%m-%d" }}</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  {% endfor %}
   <url>
-    <loc>https://TrinhHuuTho.github.io/blog/post-2-computer-vision-yolov8.html</loc>
-    <lastmod>2025-02-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://TrinhHuuTho.github.io/blog/post-3-rag-pipeline.html</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://TrinhHuuTho.github.io/guestbook.html</loc>
-    <lastmod>2025-03-10</lastmod>
+    <loc>{{ site.url }}/guestbook.html</loc>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://TrinhHuuTho.github.io/contact.html</loc>
-    <lastmod>2025-03-10</lastmod>
+    <loc>{{ site.url }}/contact.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

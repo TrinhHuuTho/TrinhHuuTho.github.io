@@ -1,0 +1,21 @@
+title: "Trinh Huu Tho — AI Engineer"
+description: "Articles on AI, Machine Learning, LLMs, Computer Vision, and software engineering by Trinh Huu Tho."
+url: "https://TrinhHuuTho.github.io"
+baseurl: ""
+
+# Permalinks for posts — pretty URLs with no .html extension
+permalink: /blog/:title/
+
+# Markdown processor
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: none   # Use client-side Highlight.js instead of Rouge
+
+# Exclude from Jekyll build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - node_modules/
+  - README.md
