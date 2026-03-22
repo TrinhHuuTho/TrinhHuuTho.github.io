@@ -256,7 +256,7 @@ if (contactForm) {
         throw new Error('Network response was not ok');
       }
     } catch {
-      alert('Oops! Something went wrong. Please try emailing me directly.');
+      alert('Oops! Your ad blocker might be blocking Formspree. Please try disabling AdBlock or emailing me directly.');
     } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send Message';
