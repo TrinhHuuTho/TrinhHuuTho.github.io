@@ -1,6 +1,6 @@
-# 🤖 Trinh Huu Tho — AI Engineer Portfolio
+# Trinh Huu Tho — Personal Portfolio
 
-A modern, fast, and fully responsive personal portfolio website for an AI/ML Engineer. Built with vanilla HTML, CSS, and JavaScript — no frameworks needed, GitHub Pages compatible out of the box.
+A modern, fast, and fully responsive personal portfolio website. Built with vanilla HTML/CSS/JS and Jekyll — no heavy frameworks, GitHub Pages compatible out of the box.
 
 🔗 **Live site**: [https://TrinhHuuTho.github.io](https://TrinhHuuTho.github.io)
 
@@ -12,9 +12,10 @@ A modern, fast, and fully responsive personal portfolio website for an AI/ML Eng
 - **Responsive design** — mobile-first, works on all screen sizes
 - **Smooth animations** via Intersection Observer API
 - **Project filter** by category (LLM, NLP, Computer Vision, MLOps, Research)
-- **Blog** with search, tag filters, and syntax-highlighted code snippets (Highlight.js)
-- **Guestbook** powered by [Giscus](https://giscus.app) (GitHub Discussions)
+- **Blog** powered by Jekyll — write posts in Markdown, published automatically
+- **Guestbook & Blog Comments** powered by [Giscus](https://giscus.app) (GitHub Discussions)
 - **Contact form** powered by [Formspree](https://formspree.io)
+- **Centralized config** — Giscus IDs and Formspree ID stored in `_data/giscus.yml`
 - **SEO ready** — meta tags, Open Graph, Twitter Card, sitemap.xml, robots.txt
 - **RSS Feed** for blog posts
 - **Accessibility** — semantic HTML, ARIA attributes, keyboard navigation
@@ -25,25 +26,31 @@ A modern, fast, and fully responsive personal portfolio website for an AI/ML Eng
 
 ```
 TrinhHuuTho.github.io/
-├── index.html              # Homepage (hero, about, projects, blog, contact previews)
-├── about.html              # Full about page with timeline & certifications
+├── _config.yml             # Jekyll configuration (title, URL, permalink, etc.)
+├── _data/
+│   └── giscus.yml          # Centralized config: Giscus IDs + Formspree ID
+├── _layouts/
+│   ├── default.html        # Base layout (nav, footer)
+│   └── post.html           # Blog post layout (with Giscus comments)
+├── _posts/                 # Blog posts (Markdown, Jekyll-processed)
+│   └── YYYY-MM-DD-title.md
+├── index.html              # Homepage (hero, about, projects, blog preview)
+├── about.html              # Full about page (timeline, skills, awards)
 ├── projects.html           # Projects grid with category filter
+├── blog/
+│   └── index.html          # Blog listing with search & tag filter
 ├── guestbook.html          # Guestbook with Giscus integration
 ├── contact.html            # Contact form (Formspree)
 ├── sitemap.xml             # SEO sitemap
 ├── robots.txt              # SEO robots file
 ├── feed.xml                # RSS feed for blog
-├── blog/
-│   ├── index.html          # Blog listing with search & tag filter
-│   ├── post-1-building-llm-chatbot.html
-│   ├── post-2-computer-vision-yolov8.html
-│   └── post-3-rag-pipeline.html
 ├── css/
 │   └── style.css           # Main stylesheet (dark mode, responsive, animations)
 ├── js/
 │   └── main.js             # Dark mode, nav, animations, filters, search, form
 └── assets/
     └── images/
+        ├── avatar.svg      # Avatar image
         └── favicon.svg     # SVG favicon
 ```
 
@@ -58,15 +65,17 @@ git clone https://github.com/TrinhHuuTho/TrinhHuuTho.github.io.git
 cd TrinhHuuTho.github.io
 ```
 
-### 2. Open locally
+### 2. Run locally
 
 ```bash
-# Option A: Python built-in server
-python -m http.server 8000
-# Then open http://localhost:8000
+# With Jekyll (recommended — renders blog posts correctly)
+bundle install
+bundle exec jekyll serve
+# Open http://localhost:4000
 
-# Option B: Node.js live-server
-npx live-server
+# Without Jekyll (static pages only, blog posts won't render)
+python -m http.server 8000
+# Open http://localhost:8000
 ```
 
 ### 3. Deploy to GitHub Pages
@@ -81,69 +90,100 @@ npx live-server
 
 ### Personal Information
 
-Search and replace these placeholders across all HTML files:
+Search and replace across all HTML files:
 
 | Placeholder | Replace with |
 |-------------|-------------|
 | `Trinh Huu Tho` | Your full name |
 | `TrinhHuuTho` | Your GitHub username |
-| `trinhuutho@email.com` | Your email address |
-| `linkedin.com/in/trinhuutho` | Your LinkedIn profile |
-| `twitter.com/trinhuutho` | Your Twitter/X handle |
-| `Ho Chi Minh City, Vietnam` | Your location |
+| `trinhuutho@gmail.com` | Your email address |
+| `linkedin.com/in/tho-trinh` | Your LinkedIn profile URL |
+| `Thu Duc City, Vietnam` | Your location |
 
 ### Avatar Photo
 
-Replace the placeholder initials in `index.html` with a real `<img>` tag inside `.avatar-img`:
+In `index.html`, find `.avatar-img` and replace the placeholder with a real image:
 
 ```html
-<!-- In index.html, find .avatar-img and replace the placeholder div: -->
 <div class="avatar-img">
-  <img src="assets/images/avatar.jpg" alt="Trinh Huu Tho" width="280" height="280" />
+  <img src="assets/images/avatar.jpg" alt="Your Name" width="280" height="280" />
 </div>
 ```
 
 ### Setting up Giscus (Guestbook + Blog Comments)
 
+All Giscus IDs are centralized in **`_data/giscus.yml`** — edit only this one file:
+
+```yaml
+repo: "YOUR_USERNAME/YOUR_USERNAME.github.io"
+repo_id: "YOUR_REPO_ID"
+
+blog_category: "Blog Comments"
+blog_category_id: "YOUR_BLOG_CATEGORY_ID"
+
+guestbook_category: "Guestbook"
+guestbook_category_id: "YOUR_GUESTBOOK_CATEGORY_ID"
+```
+
+To get your IDs:
 1. Enable **Discussions** in your GitHub repo settings
-2. Install the [Giscus GitHub App](https://github.com/apps/giscus) on your repo
-3. Go to [giscus.app](https://giscus.app) and fill in your repo info
-4. Copy the generated `data-repo-id` and `data-category-id`
-5. Replace `YOUR_REPO_ID` and `YOUR_CATEGORY_ID` in:
-   - `guestbook.html`
-   - `blog/post-1-building-llm-chatbot.html`
-   - `blog/post-2-computer-vision-yolov8.html`
-   - `blog/post-3-rag-pipeline.html`
+2. Install the [Giscus GitHub App](https://github.com/apps/giscus)
+3. Go to [giscus.app](https://giscus.app), enter your repo, and copy the generated IDs
 
 ### Setting up Contact Form (Formspree)
 
+The Formspree form ID is also in **`_data/giscus.yml`**:
+
+```yaml
+formspree_id: "YOUR_FORMSPREE_ID"
+```
+
+To get your ID:
 1. Create a free account at [formspree.io](https://formspree.io)
-2. Create a new form and copy the form ID
-3. In `contact.html`, replace `YOUR_FORMSPREE_ID` in the `<form action="...">` attribute
+2. Create a new form and copy the form ID (e.g. `abcdefgh`)
 
 ### Adding New Blog Posts
 
-1. Copy an existing blog post file in `blog/`
-2. Update the content, meta tags, title, date, and read-time
-3. Add a card for the new post in `blog/index.html`
-4. Add a preview card in `index.html` (Latest Articles section)
-5. Add the URL to `sitemap.xml` and an `<item>` to `feed.xml`
+Create a new Markdown file in `_posts/` following the naming convention:
+
+```
+_posts/YYYY-MM-DD-your-post-title.md
+```
+
+Minimal front matter:
+
+```yaml
+---
+layout: post
+title: "Your Post Title"
+date: YYYY-MM-DD
+category: NLP
+tags: [nlp, python]
+excerpt: "Short description shown in blog listing."
+subtitle: "Longer subtitle shown in post header."
+read_time: 5
+cover_image: "https://your-image-url.jpg"
+---
+
+Your post content in Markdown here...
+```
+
+Jekyll will automatically include it in the blog listing and RSS feed.
 
 ### Adding New Projects
 
-In `projects.html`, copy a project card `<article>` and update:
-- `data-categories` attribute (for filter functionality)
-- Project title, description, tech stack, and links
+In `projects.html`, copy an existing `<article class="project-card">` block and update:
+- `data-categories` — for the filter buttons (e.g. `"nlp"`, `"llm"`, `"cv"`)
+- Project title, description, tech badges, and GitHub/demo links
 
-### Dark Mode Customization
+### Dark Mode Colors
 
-All colors are CSS custom properties in `css/style.css`:
+All theme colors are CSS custom properties in `css/style.css`:
 
 ```css
 :root {
-  --accent: #6c63ff;        /* Primary accent color */
-  --accent-secondary: #ff6584; /* Secondary accent (gradients) */
-  /* ... */
+  --accent: #6c63ff;           /* Primary accent color */
+  --accent-secondary: #ff6584; /* Secondary accent (used in gradients) */
 }
 ```
 
@@ -152,11 +192,12 @@ All colors are CSS custom properties in `css/style.css`:
 ## 🔧 Technologies Used
 
 - **HTML5** — Semantic markup
-- **CSS3** — Custom properties, CSS Grid, Flexbox, animations
-- **Vanilla JavaScript** — No dependencies (except CDN libs for code highlighting)
+- **CSS3** — Custom properties, Grid, Flexbox, animations
+- **Vanilla JavaScript** — No build tools or npm required
+- **[Jekyll](https://jekyllrb.com)** — Static site generator for blog posts
 - **[Giscus](https://giscus.app)** — Comments & guestbook via GitHub Discussions
 - **[Formspree](https://formspree.io)** — Contact form backend
-- **[Highlight.js](https://highlightjs.org)** — Code syntax highlighting in blog posts
+- **[Highlight.js](https://highlightjs.org)** — Code syntax highlighting
 - **[Google Fonts](https://fonts.google.com)** — Inter + Fira Code
 
 ---
@@ -165,7 +206,7 @@ All colors are CSS custom properties in `css/style.css`:
 
 - ⚡ Pure HTML/CSS/JS — no heavy frameworks
 - 🖼️ SVG favicon — tiny file size
-- 📦 No npm dependencies to install
+- 📦 No npm dependencies
 - 🌐 Hosted on GitHub Pages CDN
 - ♿ WCAG 2.1 AA accessible
 
@@ -173,4 +214,10 @@ All colors are CSS custom properties in `css/style.css`:
 
 ## 📄 License
 
-Apache 2.0 License — feel free to use this as a template for your own portfolio!
+Copyright 2025 Trinh Huu Tho
+
+Licensed under the Apache License, Version 2.0. You may not use this file except in compliance with the License. You may obtain a copy of the License at:
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
