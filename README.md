@@ -173,4 +173,4 @@ All colors are CSS custom properties in `css/style.css`:
 
 ## 📄 License
 
-MIT License — feel free to use this as a template for your own portfolio!
+Apache 2.0 License — feel free to use this as a template for your own portfolio!
