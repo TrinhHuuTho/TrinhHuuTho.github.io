@@ -9,8 +9,13 @@ excerpt: "A step-by-step guide to building an enterprise-grade chatbot using Ret
 description: "A step-by-step guide to building an enterprise-grade RAG chatbot with LangChain and FastAPI, from document ingestion to production deployment."
 subtitle: "A step-by-step guide to building an enterprise-grade chatbot using Retrieval-Augmented Generation, from document ingestion to deployment."
 read_time: 8
-emoji: "🤖"
----
+emoji: "🤖"
+cover_image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop&q=80"
+---
+
+![Building a RAG Chatbot with LangChain](https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop&q=80)
+*Production-ready retrieval-augmented generation with LangChain and FastAPI*
+
 
 Retrieval-Augmented Generation (RAG) has become the go-to architecture for building domain-specific chatbots that need to answer questions based on private knowledge bases. In this article, I'll walk you through building a production-ready RAG system using LangChain, FAISS, and FastAPI.
 

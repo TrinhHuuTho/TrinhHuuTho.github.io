@@ -59,15 +59,15 @@ layout: default
   </article>
 </main>
 
-<!-- Giscus Comments -->
+<!-- Giscus Comments - IDs loaded from _data/giscus.yml -->
 <section style="padding: 60px 0; border-top: 1px solid var(--border);">
   <div class="container" style="max-width: 800px;">
     <h3 style="margin-bottom: 24px;">Comments</h3>
     <script src="https://giscus.app/client.js"
-      data-repo="TrinhHuuTho/TrinhHuuTho.github.io"
-      data-repo-id="R_kgDORq_GoQ"
-      data-category="Blog Comments"
-      data-category-id="DIC_kwDORq_Goc4C497n"
+      data-repo="{{ site.data.giscus.repo }}"
+      data-repo-id="{{ site.data.giscus.repo_id }}"
+      data-category="{{ site.data.giscus.blog_category }}"
+      data-category-id="{{ site.data.giscus.blog_category_id }}"
       data-mapping="pathname"
       data-strict="0"
       data-reactions-enabled="1"

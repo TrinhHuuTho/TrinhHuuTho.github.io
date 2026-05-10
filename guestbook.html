@@ -49,15 +49,15 @@
     <div class="container">
       <div class="guestbook-intro fade-in">
         <p>
-          Sign the guestbook with your GitHub account! Share thoughts, say hi, leave feedback, or just let me know you stopped by. This is powered by <a href="https://giscus.app" target="_blank" rel="noopener noreferrer">Giscus</a> — a comments system built on GitHub Discussions.
+          Sign the guestbook with your free GitHub account! Share thoughts, say hi, leave feedback, or just let me know you stopped by. This is powered by <a href="https://giscus.app" target="_blank" rel="noopener noreferrer">Giscus</a> — a comments system built on GitHub Discussions.
         </p>
         <div style="display: flex; gap: 12px; justify-content: center; margin-top: 20px; flex-wrap: wrap;">
           <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; color: var(--text-muted);">
             🔒 Only GitHub users can sign (prevents spam)
           </span>
-          <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; color: var(--text-muted);">
+          <!-- <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.9rem; color: var(--text-muted);">
             💬 Comments are stored as GitHub Discussions
-          </span>
+          </span> -->
         </div>
       </div>
 
@@ -77,10 +77,10 @@
             5. Replace YOUR_REPO_ID and YOUR_CATEGORY_ID below with the values from giscus.app
           -->
           <script src="https://giscus.app/client.js"
-            data-repo="TrinhHuuTho/TrinhHuuTho.github.io"
-            data-repo-id="R_kgDORq_GoQ"
-            data-category="Guestbook"
-            data-category-id="DIC_kwDORq_Goc4C497g"
+            data-repo="{{ site.data.giscus.repo }}"
+            data-repo-id="{{ site.data.giscus.repo_id }}"
+            data-category="{{ site.data.giscus.guestbook_category }}"
+            data-category-id="{{ site.data.giscus.guestbook_category_id }}"
             data-mapping="specific"
             data-term="Guestbook"
             data-strict="0"
@@ -97,7 +97,7 @@
       </div>
 
       <!-- Info Card -->
-      <div class="fade-in" style="max-width: 800px; margin: 40px auto 0; padding: 24px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px;">
+      <!-- <div class="fade-in" style="max-width: 800px; margin: 40px auto 0; padding: 24px; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px;">
         <h4 style="margin-bottom: 12px;">📌 Setup Note for Site Owner</h4>
         <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 12px;">
           To activate Giscus comments, you need to:
@@ -108,7 +108,7 @@
           <li style="margin-bottom: 6px;">Visit <a href="https://giscus.app" target="_blank" rel="noopener noreferrer">giscus.app</a> to get your <code>data-repo-id</code> and <code>data-category-id</code></li>
           <li style="margin-bottom: 6px;">Replace <code>YOUR_REPO_ID</code> and <code>YOUR_CATEGORY_ID</code> in this file and all blog post files</li>
         </ol>
-      </div>
+      </div> -->
     </div>
   </section>
 
