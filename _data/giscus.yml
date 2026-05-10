@@ -1,0 +1,14 @@
+# Giscus configuration - Centralized IDs for all comment/guestbook sections
+# DO NOT commit this file with real secrets if your repo is public.
+# These are public GitHub Discussion IDs, safe to version-control.
+
+repo: "TrinhHuuTho/TrinhHuuTho.github.io"
+repo_id: "R_kgDORq_GoQ"
+
+# Category: Blog Comments (used in post layout)
+blog_category: "Blog Comments"
+blog_category_id: "DIC_kwDORq_Goc4C497n"
+
+# Category: Guestbook (used in guestbook page)
+guestbook_category: "Guestbook"
+guestbook_category_id: "DIC_kwDORq_Goc4C497g"
