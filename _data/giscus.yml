@@ -9,9 +9,9 @@ repo_id: "R_kgDORq_GoQ"
 blog_category: "Blog Comments"
 blog_category_id: "DIC_kwDORq_Goc4C497n"
 
-# Category: Guestbook (used in guestbook page)
-guestbook_category: "Guestbook"
-guestbook_category_id: "DIC_kwDORq_Goc4C497g"
+# Category: Testimonials (used in testimonials page)
+testimonials_category: "Testimonials"
+testimonials_category_id: "DIC_kwDORq_Goc4C497g"
 
 # Formspree contact form
 # Security note: Formspree form IDs are public (visible in HTML). This is by design.
