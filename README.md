@@ -2,14 +2,16 @@
 
 > A modern, fast, and fully responsive personal portfolio — built with vanilla HTML/CSS/JS and Jekyll. No heavy frameworks, GitHub Pages compatible out of the box.
 
-[![License](https://img.shields.io/github/license/TrinhHuuTho/TrinhHuuTho.github.io?style=flat-square)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/TrinhHuuTho/TrinhHuuTho.github.io?style=flat-square)](https://github.com/TrinhHuuTho/TrinhHuuTho.github.io/commits/main)
-[![Repo Size](https://img.shields.io/github/repo-size/TrinhHuuTho/TrinhHuuTho.github.io?style=flat-square)](https://github.com/TrinhHuuTho/TrinhHuuTho.github.io)
-[![Stars](https://img.shields.io/github/stars/TrinhHuuTho/TrinhHuuTho.github.io?style=flat-square)](https://github.com/TrinhHuuTho/TrinhHuuTho.github.io/stargazers)
-[![Forks](https://img.shields.io/github/forks/TrinhHuuTho/TrinhHuuTho.github.io?style=flat-square)](https://github.com/TrinhHuuTho/TrinhHuuTho.github.io/network/members)
-[![Issues](https://img.shields.io/github/issues/TrinhHuuTho/TrinhHuuTho.github.io?style=flat-square)](https://github.com/TrinhHuuTho/TrinhHuuTho.github.io/issues)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/TrinhHuuTho/TrinhHuuTho.github.io/pulls)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-deployed-brightgreen?style=flat-square&logo=github)](https://TrinhHuuTho.github.io)
+<p>
+  <!-- <a href="https://github.com/TrinhHuuTho/TrinhHuuTho.github.io/stargazers"><img src="https://img.shields.io/github/stars/TrinhHuuTho/TrinhHuuTho.github.io?style=for-the-badge&logo=github&color=FFD700" alt="Stars"></a>
+  <a href="https://github.com/TrinhHuuTho/TrinhHuuTho.github.io/network/members"><img src="https://img.shields.io/github/forks/TrinhHuuTho/TrinhHuuTho.github.io?style=for-the-badge&logo=github&color=4FC3F7" alt="Forks"></a>
+  <a href="https://github.com/TrinhHuuTho/TrinhHuuTho.github.io/issues"><img src="https://img.shields.io/github/issues/TrinhHuuTho/TrinhHuuTho.github.io?style=for-the-badge&logo=github&color=F87171" alt="Issues"></a> -->
+  <a href="https://github.com/TrinhHuuTho/TrinhHuuTho.github.io/pulls"><img src="https://img.shields.io/badge/PRs-welcome-22C55E?style=for-the-badge&logo=github" alt="PRs Welcome"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/TrinhHuuTho/TrinhHuuTho.github.io?style=for-the-badge&color=8B5CF6" alt="License"></a>
+  <img src="https://img.shields.io/github/repo-size/TrinhHuuTho/TrinhHuuTho.github.io?style=for-the-badge&color=64748B" alt="Repo Size">
+  <img src="https://img.shields.io/github/last-commit/TrinhHuuTho/TrinhHuuTho.github.io?style=for-the-badge&color=F97316" alt="Last Commit">
+  <a href="https://TrinhHuuTho.github.io"><img src="https://img.shields.io/badge/GitHub%20Pages-deployed-22C55E?style=for-the-badge&logo=github" alt="GitHub Pages"></a>
+</p>
 
 ---
 
@@ -50,19 +52,19 @@
 
 ## ✨ Features
 
-| Feature | Details |
-|---------|---------|
-| 🌗 **Dark / Light mode** | System preference detection + `localStorage` persistence |
-| 📱 **Responsive design** | Mobile-first, adapts to all screen sizes |
-| 🎞️ **Smooth animations** | Powered by Intersection Observer API |
-| 🗂️ **Project filter** | Filter by LLM · NLP · Computer Vision · MLOps · Research |
-| ✍️ **Blog** | Jekyll-powered — write in Markdown, published automatically |
-| 💬 **Comments & Guestbook** | [Giscus](https://giscus.app) via GitHub Discussions |
-| 📬 **Contact form** | [Formspree](https://formspree.io) — zero-backend |
-| 🔧 **Centralized config** | All IDs in one file: `_data/giscus.yml` |
-| 🔍 **SEO ready** | Open Graph, Twitter Card, `sitemap.xml`, `robots.txt` |
-| 📡 **RSS feed** | Auto-generated blog feed |
-| ♿ **Accessible** | Semantic HTML, ARIA attributes, keyboard navigation (WCAG 2.1 AA) |
+| Feature                     | Details                                                           |
+| --------------------------- | ----------------------------------------------------------------- |
+| 🌗 **Dark / Light mode**    | System preference detection + `localStorage` persistence          |
+| 📱 **Responsive design**    | Mobile-first, adapts to all screen sizes                          |
+| 🎞️ **Smooth animations**    | Powered by Intersection Observer API                              |
+| 🗂️ **Project filter**       | Filter by LLM · NLP · Computer Vision · MLOps · Research          |
+| ✍️ **Blog**                 | Jekyll-powered — write in Markdown, published automatically       |
+| 💬 **Comments & Guestbook** | [Giscus](https://giscus.app) via GitHub Discussions               |
+| 📬 **Contact form**         | [Formspree](https://formspree.io) — zero-backend                  |
+| 🔧 **Centralized config**   | All IDs in one file: `_data/giscus.yml`                           |
+| 🔍 **SEO ready**            | Open Graph, Twitter Card, `sitemap.xml`, `robots.txt`             |
+| 📡 **RSS feed**             | Auto-generated blog feed                                          |
+| ♿ **Accessible**           | Semantic HTML, ARIA attributes, keyboard navigation (WCAG 2.1 AA) |
 
 ---
 
@@ -129,13 +131,13 @@ python -m http.server 8000
 
 Find-and-replace these five values across all HTML files:
 
-| Placeholder | Replace with |
-|-------------|-------------|
-| `Trinh Huu Tho` | Your full name |
-| `TrinhHuuTho` | Your GitHub username |
-| `trinhuutho@gmail.com` | Your email address |
-| `linkedin.com/in/tho-trinh` | Your LinkedIn URL |
-| `Thu Duc City, Vietnam` | Your location |
+| Placeholder                 | Replace with         |
+| --------------------------- | -------------------- |
+| `Trinh Huu Tho`             | Your full name       |
+| `TrinhHuuTho`               | Your GitHub username |
+| `trinhuutho@gmail.com`      | Your email address   |
+| `linkedin.com/in/tho-trinh` | Your LinkedIn URL    |
+| `Thu Duc City, Vietnam`     | Your location        |
 
 ### Avatar Photo
 
@@ -143,7 +145,12 @@ In `index.html`, find `.avatar-img` and point to your image:
 
 ```html
 <div class="avatar-img">
-  <img src="assets/images/avatar.jpg" alt="Your Name" width="280" height="280" />
+  <img
+    src="assets/images/avatar.jpg"
+    alt="Your Name"
+    width="280"
+    height="280"
+  />
 </div>
 ```
 
@@ -161,6 +168,7 @@ guestbook_category_id: "YOUR_GUESTBOOK_CATEGORY_ID"
 ```
 
 To get your IDs:
+
 1. Enable **Discussions** in your GitHub repo settings.
 2. Install the [Giscus GitHub App](https://github.com/apps/giscus).
 3. Go to [giscus.app](https://giscus.app), enter your repo name, and copy the generated IDs.
@@ -191,13 +199,13 @@ subtitle: "Longer subtitle shown in the post header."
 read_time: 5
 cover_image: "https://your-image-url.jpg"
 ---
-
 Your content in Markdown here…
 ```
 
 ### Adding Projects
 
 In `projects.html`, duplicate an `<article class="project-card">` block and update:
+
 - `data-categories` — e.g. `"nlp"`, `"llm"`, `"cv"`
 - Title, description, tech badges, GitHub/demo links
 
@@ -206,7 +214,7 @@ In `projects.html`, duplicate an `<article class="project-card">` block and upda
 ```css
 /* css/style.css */
 :root {
-  --accent: #6c63ff;           /* Primary accent */
+  --accent: #6c63ff; /* Primary accent */
   --accent-secondary: #ff6584; /* Used in gradients */
 }
 ```
@@ -266,12 +274,12 @@ bundle exec jekyll serve   # → http://localhost:4000
 
 ### Branch naming
 
-| Type | Pattern | Example |
-|------|---------|---------|
-| Bug fix | `fix/short-description` | `fix/mobile-nav-overflow` |
-| New feature | `feat/short-description` | `feat/project-search` |
-| Docs | `docs/short-description` | `docs/update-readme` |
-| Style / UI | `style/short-description` | `style/dark-mode-contrast` |
+| Type        | Pattern                   | Example                    |
+| ----------- | ------------------------- | -------------------------- |
+| Bug fix     | `fix/short-description`   | `fix/mobile-nav-overflow`  |
+| New feature | `feat/short-description`  | `feat/project-search`      |
+| Docs        | `docs/short-description`  | `docs/update-readme`       |
+| Style / UI  | `style/short-description` | `style/dark-mode-contrast` |
 
 ### Commit style
 
@@ -290,7 +298,7 @@ style: improve dark mode contrast for code blocks
 - [ ] Works on mobile (check at 320px–375px width)
 - [ ] Dark mode and light mode both look correct
 - [ ] No broken links or console errors
-- [ ] PR description explains *what* and *why*
+- [ ] PR description explains _what_ and _why_
 
 ---
 
