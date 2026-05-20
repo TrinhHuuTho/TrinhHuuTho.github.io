@@ -18,7 +18,7 @@
 <!-- Replace the image below with a real screenshot (e.g. assets/images/preview.png) -->
 <!-- Recommended: capture a full-page screenshot at 1440px width -->
 <p align="center">
-  <img src="assets/images/preview.png" alt="Portfolio preview — light and dark mode side by side" width="900" />
+  <img src="assets/images/preview.gif" alt="Portfolio preview — light and dark mode side by side" width="900" />
 </p>
 
 <!-- Optional: add a short screen-recording GIF (≤ 3 MB) showing dark/light toggle, project filter, and blog -->
