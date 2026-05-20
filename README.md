@@ -160,7 +160,10 @@ guestbook_category: "Guestbook"
 guestbook_category_id: "YOUR_GUESTBOOK_CATEGORY_ID"
 ```
 
-Get your IDs: enable **Discussions** in repo settings → install [Giscus App](https://github.com/apps/giscus) → generate at [giscus.app](https://giscus.app).
+To get your IDs:
+1. Enable **Discussions** in your GitHub repo settings.
+2. Install the [Giscus GitHub App](https://github.com/apps/giscus).
+3. Go to [giscus.app](https://giscus.app), enter your repo name, and copy the generated IDs.
 
 ### Contact Form (Formspree)
 
@@ -284,7 +287,7 @@ style: improve dark mode contrast for code blocks
 ### Pull request checklist
 
 - [ ] Tested locally with `bundle exec jekyll serve`
-- [ ] Works on mobile (check at ≤ 375px width)
+- [ ] Works on mobile (check at 320px–375px width)
 - [ ] Dark mode and light mode both look correct
 - [ ] No broken links or console errors
 - [ ] PR description explains *what* and *why*
