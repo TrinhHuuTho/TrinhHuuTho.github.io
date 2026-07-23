@@ -7,6 +7,16 @@
 const themeToggle = document.getElementById('themeToggle');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
+function setGiscusTheme(theme) {
+  const iframe = document.querySelector('iframe.giscus-frame');
+  if (iframe && iframe.contentWindow) {
+    iframe.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: theme } } },
+      'https://giscus.app'
+    );
+  }
+}
+
 function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('theme', theme);
@@ -14,7 +24,16 @@ function setTheme(theme) {
     themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
     themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   }
+  setGiscusTheme(theme);
 }
+
+// Sync giscus on load when the iframe is ready
+window.addEventListener('message', (event) => {
+  if (event.origin === 'https://giscus.app' && event.data && event.data.giscus) {
+    const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+    setGiscusTheme(currentTheme);
+  }
+});
 
 function initTheme() {
   const saved = localStorage.getItem('theme');
