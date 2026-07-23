@@ -19,9 +19,7 @@ cover_image: "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=120
 
 ![YOLOv8 Edge AI Deployment](https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=1200&auto=format&fit=crop&q=80)
 
-*Real-time object detection on embedded hardware — from cloud to edge*
-
-
+*Real-time object detection on embedded hardware — from cloud to edge*  
 
 Edge AI deployment is one of the most exciting challenges in applied machine learning. Getting a state-of-the-art object detection model to run in real-time on a $35 computer is deeply satisfying — and very useful for IoT applications. In this post, I'll share my complete workflow for deploying YOLOv8 on a Raspberry Pi 4.
 

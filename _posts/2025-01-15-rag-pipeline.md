@@ -19,9 +19,7 @@ cover_image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&a
 
 ![Vietnamese NLP — Fine-tuning PhoBERT](https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=1200&auto=format&fit=crop&q=80)
 
-*Transforming Vietnamese text understanding through fine-tuned BERT models*
-
-
+*Transforming Vietnamese text understanding through fine-tuned BERT models*  
 
 Vietnamese NLP presents unique challenges that don't exist in English: word segmentation, diacritical marks, rich morphology, and a severe scarcity of labeled data. In this post, I'll share my experience fine-tuning PhoBERT — a BERT model pre-trained on a large Vietnamese corpus — for sentiment analysis on social media data.
 

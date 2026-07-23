@@ -19,9 +19,7 @@ cover_image: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=120
 
 ![Building a RAG Chatbot with LangChain](https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&auto=format&fit=crop&q=80)
 
-*Production-ready retrieval-augmented generation with LangChain and FastAPI*
-
-
+*Production-ready retrieval-augmented generation with LangChain and FastAPI*  
 
 Retrieval-Augmented Generation (RAG) has become the go-to architecture for building domain-specific chatbots that need to answer questions based on private knowledge bases. In this article, I'll walk you through building a production-ready RAG system using LangChain, FAISS, and FastAPI.
 
