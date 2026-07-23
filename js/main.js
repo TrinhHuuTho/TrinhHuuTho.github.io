@@ -7,13 +7,17 @@
 const themeToggle = document.getElementById('themeToggle');
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
 
+let lastGiscusTheme = null;
+
 function setGiscusTheme(theme) {
+  if (lastGiscusTheme === theme) return;
   const iframe = document.querySelector('iframe.giscus-frame');
   if (iframe && iframe.contentWindow) {
     iframe.contentWindow.postMessage(
       { giscus: { setConfig: { theme: theme } } },
       'https://giscus.app'
     );
+    lastGiscusTheme = theme;
   }
 }
 
